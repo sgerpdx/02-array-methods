@@ -1,5 +1,10 @@
-const arrayMap = () => {
-  return ['Bret is present', 'Jemaine is present', 'Murray is present'];
+const arrayMap = (array, callback) => {
+  let arrNew = [...array];
+  for (let index = 0; index < arrNew.length; index++) {
+    arrNew[index] = callback(arrNew[index]);
+    // return callback(arrNew[index]);
+  }
+  return arrNew;
 };
 
 module.exports = arrayMap;
