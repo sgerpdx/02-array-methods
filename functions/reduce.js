@@ -1,9 +1,11 @@
 const arrayReduce = (array, callback) => {
-  let arrNew = [];
+  // let arrNew = [];
+  let sum = 0;
   for (let index = 0; index < array.length; index++) {
-    // console.log(arrNew);
+    array[index] = callback(sum, array[index]);
   }
-  return arrNew;
+
+  return sum;
 };
 
 module.exports = arrayReduce;
