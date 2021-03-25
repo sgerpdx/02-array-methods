@@ -8,8 +8,18 @@ describe('function to find array index', () => {
         return true;
       }
     };
-
     const expected = 6;
-    expect(arrayFindIndex(oldArray, testForEven)).toEqual();
+    expect(arrayFindIndex(oldArray, testForEven)).toEqual(expected);
+  });
+
+  it('returns -1 for an array containing no even integers', () => {
+    const oldArray = [5, 7, 9];
+    const testForEven = (i) => {
+      if (i % 2 === 0) {
+        return true;
+      }
+    };
+    const expected = -1;
+    expect(arrayFindIndex(oldArray, testForEven)).toEqual(expected);
   });
 });
