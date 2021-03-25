@@ -1,6 +1,6 @@
 const arrayMap = require('../functions/map');
 
-describe('array mapping function', () => {
+describe.skip('array mapping function', () => {
   it('returns a new string array by appending', () => {
     const oldArray = ['Bret', 'Jemaine', 'Murray'];
     const recordPresent = (i) => `${i} is present`;
@@ -23,10 +23,3 @@ describe('array mapping function', () => {
     expect(arrayMap(oldArray, recordPresent)).toEqual(newArray);
   });
 });
-
-// describe('', () => {
-//     it('', () => {
-
-//       expect('').toEqual('');
-//     });
-//   });

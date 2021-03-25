@@ -1,6 +1,6 @@
 const arrayReduce = require('../functions/reduce');
 
-describe('array-reducing function', () => {
+describe.skip('array-reducing function', () => {
   it('', () => {
     const oldArray = [4, 4, 4, 4];
     const sumDown = (accSum, i) => {

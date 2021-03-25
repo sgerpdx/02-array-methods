@@ -1,12 +1,12 @@
 const arrayFindIndex = (array, callback) => {
+  let targetItem;
   for (let index = 0; index < array.length; index++) {
     if (callback(array[index])) {
-      return array[index];
+      targetItem = array[index];
       break;
-    } else {
     }
+    return targetItem;
   }
-  return arrNew;
 };
 
 module.exports = arrayFindIndex;
