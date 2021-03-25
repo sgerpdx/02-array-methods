@@ -1,6 +1,6 @@
 const arrayMap = require('../functions/map');
 
-describe.skip('array mapping function', () => {
+describe('array mapping function', () => {
   it('returns a new string array by appending', () => {
     const oldArray = ['Bret', 'Jemaine', 'Murray'];
     const recordPresent = (i) => `${i} is present`;

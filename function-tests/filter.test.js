@@ -1,6 +1,6 @@
 const arrayFilter = require('../functions/filter');
 
-describe.skip('array-filtering function', () => {
+describe('array-filtering function', () => {
   it('takes in an integer array and returns a new array with only the odd integers', () => {
     const oldArray = [5, 6, 7, 8, 9];
     const testForOdd = (i) => {

@@ -11,4 +11,15 @@ describe('function to determine if every item in array meets a criterion', () =>
     const expected = true;
     expect(arrayEvery(targetArray, testForEven)).toEqual(expected);
   });
+
+  it('returns false if any item in an array is not an even integer', () => {
+    const targetArray = [4, 7, 12, 8, 16];
+    const testForEven = (i) => {
+      if (i % 2 === 0) {
+        return true;
+      }
+    };
+    const expected = false;
+    expect(arrayEvery(targetArray, testForEven)).toEqual(expected);
+  });
 });
