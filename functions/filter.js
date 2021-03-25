@@ -4,7 +4,6 @@ const arrayFilter = (array, callback) => {
     if (callback(array[index])) {
       arrNew = [...arrNew, array[index]];
     }
-    console.log(arrNew);
   }
   return arrNew;
 };
