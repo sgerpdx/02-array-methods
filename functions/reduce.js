@@ -1,11 +1,10 @@
-const arrayReduce = (array, callback) => {
+const arrayReduce = (array, callback, acc) => {
   // let arrNew = [];
-  let sum = 0;
   for (let index = 0; index < array.length; index++) {
-    array[index] = callback(sum, array[index]);
+    acc = callback(acc, array[index], index);
   }
 
-  return sum;
+  return acc;
 };
 
 module.exports = arrayReduce;

@@ -1,13 +1,15 @@
 const arrayReduce = require('../functions/reduce');
 
-describe.skip('array-reducing function', () => {
+describe('array-reducing function', () => {
   it('', () => {
     const oldArray = [4, 4, 4, 4];
-    const sumDown = (accSum, i) => {
-      accSum = accSum + i;
+    const sumDown = (accSum, item, index) => {
+      //return (accSum = accSum + item);
+      if (index % 2 === 0) accSum += item;
+      return accSum;
     };
 
-    const arraySum = 16;
-    expect(arrayReduce(oldArray, sumDown)).toEqual(arraySum);
+    const arraySum = 8;
+    expect(arrayReduce(oldArray, sumDown, 0)).toEqual(arraySum);
   });
 });
